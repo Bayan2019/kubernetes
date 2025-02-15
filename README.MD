@@ -9,5 +9,31 @@ It takes care of scaling, distribution, and connectivity among these containers.
 
 ## Install
 
+### Kubectl
+
 The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. 
 It's a client that communicates with a Kubernetes API server.
+
+### Minikube
+
+In production, you probably wouldn't use Minikube, you would use a cluster of servers, probably in the cloud. 
+That's expensive! 
+Minikube is a fantastic tool that allows you to run a single-node Kubernetes cluster on your local machine.
+
+## Pods
+
+## Deployments
+
+## ConfigMaps
+
+## Services
+
+## Ingress
+
+## Storage
+
+## Namespaces
+
+## Scaling
+
+## Nodes
