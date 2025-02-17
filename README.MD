@@ -121,7 +121,24 @@ There are several ways to manage environment variables in Kubernetes.
 One of the most common ways is to use ConfigMaps. 
 ConfigMaps allow us to decouple our configurations from our container images, which is important because we don't want to have to rebuild our images every time we want to change a configuration value.
 
+ConfigMaps are a great way to manage innocent environment variables in Kubernetes. 
+Things like:
+
+* Ports
+* URLs of other services
+* Feature flags
+* Settings that change between environments, like `DEBUG` mode
+
+However, they are not cryptographically secure. 
+ConfigMaps aren't encrypted, and they can be accessed by anyone with access to the cluster.
+
+If you need to store sensitive information, you should use Kubernetes Secrets or a third-party solution.
+
 ## 5. Services
+
+Services provide a stable endpoint for pods. 
+They are an abstraction used to provide a stable endpoint and load balance traffic across a group of Pods. 
+By "stable endpoint", I just mean that the service will always be available at a given URL, even if the pod is destroyed and recreated.
 
 ## 6. Ingress
 
